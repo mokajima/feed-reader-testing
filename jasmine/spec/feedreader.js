@@ -73,7 +73,7 @@ $(function() {
      * when the loadFeed function is called and completes its work
      */
     it('should have at least a single element', function(done) {
-      const entryLink = document.getElementsByClassName('entry-link');
+      const entryLink = document.querySelectorAll('.feed .entry-link');
       expect(entryLink.length).toBeGreaterThan(0);
       done();
     });
