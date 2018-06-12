@@ -9,18 +9,13 @@
  * to ensure they don't run until the DOM is ready.
  */
 $(function() {
-  /* This is our first test suite - a test suite just contains
-  * a related set of tests. This suite is all about the RSS
-  * feeds definitions, the allFeeds variable in our application.
-  */
+
+  /* This suite is all about the RSS feeds definitions,
+   * the allFeeds variable in our application.
+   */
   describe('RSS Feeds', function() {
-    /* This is our first test - it tests to make sure that the
-     * allFeeds variable has been defined and that it is not
-     * empty. Experiment with this before you get started on
-     * the rest of this project. What happens when you change
-     * allFeeds in app.js to be an empty array and refresh the
-     * page?
-     */
+
+    // The allFeeds variable has been defined and it is not empty
     it('are defined', function() {
       expect(allFeeds).toBeDefined();
       expect(allFeeds.length).not.toBe(0);
@@ -44,6 +39,7 @@ $(function() {
 
   });
 
+  // This suite is about the menu
   describe('The menu', function() {
 
     // The menu element is hidden by default
@@ -66,6 +62,7 @@ $(function() {
 
   });
 
+  // This suite is about the initial entries
   describe('Initial Entries', function() {
 
     beforeEach(function(done) {
@@ -83,6 +80,7 @@ $(function() {
 
   });
 
+  // This suite is about the new feed
   describe('New Feed Selection', function() {
 
     const feed = document.querySelector('.feed');
