@@ -24,16 +24,14 @@ $(function() {
     // Each feed has a URL defined and the URL is not empty
     it('should have their own URL', function() {
       allFeeds.forEach(function(feed) {
-        expect(feed.url).toBeDefined();
-        expect(feed.url).not.toBe('');
+        expect(feed.url).toBeTruthy();
       });
     });
 
     // Each feed has a name defined and the name is not empty
     it('should have their own name', function() {
       allFeeds.forEach(function(feed) {
-        expect(feed.name).toBeDefined();
-        expect(feed.name).not.toBe('');
+        expect(feed.name).toBeTruthy();
       });
     });
 
