@@ -84,21 +84,32 @@ $(function() {
   describe('New Feed Selection', function() {
 
     const feed = document.querySelector('.feed');
-    let oldFeed;
-
-    loadFeed(0, function() {
-      oldFeed = feed.innerHTML;
-    });
+    let oldFeed, newFeed;
 
     beforeEach(function(done) {
-      loadFeed(1, done);
+
+      loadFeed(0, function() {
+
+        // Set the value of oldFeed
+        oldFeed = feed.innerHTML;
+
+        loadFeed(1, function() {
+
+          // Set the value of newFeed
+          newFeed = feed.innerHTML;
+          done();
+
+        });
+
+      });
+
     });
 
     /* The content actually changes when a new feed is loaded
      * by the loadFeed function
      */
     it('should actually change the content', function(done) {
-      expect(feed.innerHTML).not.toBe(oldFeed);
+      expect(newFeed).not.toBe(oldFeed);
       done();
     });
 
