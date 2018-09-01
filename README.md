@@ -1,6 +1,6 @@
 # Feed Reader Testing
 
-In this project I wrote tests with Jasmine against a pre-existing application that reads RSS feeds.
+Wrote comprehensive unit tests, using the Jasmine testing framework, for an RSS Feed Reader application that uses Google's RSS API.
 
 ## Demo
 
@@ -18,4 +18,4 @@ Download the files from this repo and open index.html in your favorite browser.
 
 ## Acknowledgements
 
-- Udacity - made this feed reader
+- Udacity - provide this feed reader
